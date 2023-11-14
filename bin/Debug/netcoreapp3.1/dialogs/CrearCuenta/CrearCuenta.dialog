@@ -1,0 +1,126 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "GHwsR7",
+    "name": "CrearCuenta",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "7epFhY"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "FeZquD"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${NumberInput_Prompt_FeZquD()}",
+          "unrecognizedPrompt": "",
+          "property": "user.DNI",
+          "validations": []
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "9sbycS"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_9sbycS()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "user.NombreApellido",
+          "outputFormat": "=toLower(user.NombreApellido)",
+          "validations": []
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "DifM3N"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_DifM3N()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "user.ConfirmarOperacion",
+          "choices": [
+            "si",
+            "no"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          }
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "10L18U"
+          },
+          "condition": "=user.ConfirmarOperacion",
+          "cases": [
+            {
+              "value": "si",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "8pAL9p"
+                  },
+                  "activity": "${SendActivity_8pAL9p()}"
+                }
+              ]
+            },
+            {
+              "value": "no",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "PHrUfw"
+                  },
+                  "activity": "${SendActivity_PHrUfw()}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "An5f62"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuPrincipal"
+        }
+      ]
+    }
+  ],
+  "generator": "CrearCuenta.lg",
+  "recognizer": "CrearCuenta.lu.qna",
+  "id": "CrearCuenta"
+}

@@ -1,0 +1,111 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "d13V5e",
+    "name": "GestionCuenta",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "gHhHt0"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "A1axbu"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Alta de Cuenta",
+            "Beneficios",
+            "Denuncias"
+          ],
+          "property": "user.choice",
+          "prompt": "${ChoiceInput_Prompt_A1axbu()}",
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "wnDcf6"
+          },
+          "condition": "=user.choice",
+          "cases": [
+            {
+              "value": "Alta de Cuenta",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "HtFtIG"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "CrearCuenta"
+                }
+              ]
+            },
+            {
+              "value": "Beneficios",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "zAsEpC"
+                  },
+                  "activity": "${SendActivity_zAsEpC()}"
+                }
+              ]
+            },
+            {
+              "value": "Denuncias",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "goRahn"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "denunciarTarjetas"
+                }
+              ]
+            }
+          ],
+          "default": []
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "tjrsnk"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuPrincipal"
+        }
+      ]
+    }
+  ],
+  "generator": "GestionCuenta.lg",
+  "recognizer": "GestionCuenta.lu.qna",
+  "id": "GestionCuenta"
+}

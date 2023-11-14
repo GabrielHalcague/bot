@@ -1,0 +1,87 @@
+[import](common.lg)
+
+# SendActivity_Greeting_text()
+- ${WelcomeUser()}
+# ChoiceInput_Prompt_k7wnjo_text()
+- ¿En qué te puedo ayudar?
+# ChoiceInput_Prompt_k7wnjo()
+[Activity
+    Text = ${ChoiceInput_Prompt_k7wnjo_text()}
+]
+
+# ChoiceInput_Prompt_rNpCSE_text()
+- Sobre que necesitas información
+# ChoiceInput_Prompt_rNpCSE()
+[Activity
+    Text = ${ChoiceInput_Prompt_rNpCSE_text()}
+]
+
+# NumberInput_Prompt_eqAQdS_text()
+- Ingrese DNI:
+# NumberInput_Prompt_eqAQdS()
+[Activity
+    Text = ${NumberInput_Prompt_eqAQdS_text()}
+]
+
+# TextInput_Prompt_tQqWWB_text()
+- Nombre y Apellido
+# TextInput_Prompt_tQqWWB()
+[Activity
+    Text = ${TextInput_Prompt_tQqWWB_text()}
+]
+
+# ConfirmInput_Prompt_vKyAeU_text()
+- ¿Desea crear la cuenta?
+# ConfirmInput_Prompt_vKyAeU()
+[Activity
+    Text = ${ConfirmInput_Prompt_vKyAeU_text()}
+]
+
+# SendActivity_xR3ROs_text()
+- Gracias por confiar en nosotros
+# SendActivity_xR3ROs()
+[Activity
+    Text = ${SendActivity_xR3ROs_text()}
+]
+
+# SendActivity_e8u9P4_text()
+- ```Tener una cuenta bancaria ofrece seguridad, facilita el ahorro, permite transacciones electrónicas, genera intereses y acceso a servicios financieros. Es una herramienta esencial para administrar tus finanzas y construir un historial crediticio sólido.
+Además tenes descuentos en:
+\- Supermercados
+\- Farmacias
+\- Hoteles```
+# SendActivity_e8u9P4()
+[Activity
+    Text = ${SendActivity_e8u9P4_text()}
+]
+
+# SendActivity_X1catk_text()
+- Puedes presentar una denuncia en persona en la sucursal bancaria más cercana o a través de nuestro servicio de atención al cliente llamando al 0800-UNLaM.
+# SendActivity_X1catk()
+[Activity
+    Text = ${SendActivity_X1catk_text()}
+]
+
+# ChoiceInput_Prompt_7dULRM_text()
+- ¿Que tipo de tarjeta de desea obtener?
+# ChoiceInput_Prompt_7dULRM()
+[Activity
+    Text = ${ChoiceInput_Prompt_7dULRM_text()}
+]
+
+# ChoiceInput_Prompt_UJ1ta8_text()
+- Tipos de Tarjetas:
+# ChoiceInput_Prompt_UJ1ta8()
+[Activity
+    Text = ${ChoiceInput_Prompt_UJ1ta8_text()}
+]
+
+# SendActivity_u2dhIf_text()
+- Por favor, escribe tu consulta:
+# SendActivity_u2dhIf()
+[Activity
+    Text = ${SendActivity_u2dhIf_text()}
+]
+
+# SendActivity_t1UIlP()
+${user.choice}

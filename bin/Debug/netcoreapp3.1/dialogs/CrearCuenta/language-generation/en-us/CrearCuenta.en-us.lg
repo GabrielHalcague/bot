@@ -1,0 +1,40 @@
+[import](common.lg)
+
+# NumberInput_Prompt_FeZquD_text()
+- Ingrese DNI:
+# NumberInput_Prompt_FeZquD()
+[Activity
+    Text = ${NumberInput_Prompt_FeZquD_text()}
+]
+
+# TextInput_Prompt_9sbycS_text()
+- Nombre y Apellido
+# TextInput_Prompt_9sbycS()
+[Activity
+    Text = ${TextInput_Prompt_9sbycS_text()}
+]
+
+# ChoiceInput_Prompt_DifM3N_text()
+- ```Datos Ingresado 
+Nombre Completo: ${user.NombreApellido}
+DNI: ${user.DNI}
+
+¿Desea confirmar la operación?```
+# ChoiceInput_Prompt_DifM3N()
+[Activity
+    Text = ${ChoiceInput_Prompt_DifM3N_text()}
+]
+
+# SendActivity_8pAL9p_text()
+- Gracias por usar nuestro producto
+# SendActivity_8pAL9p()
+[Activity
+    Text = ${SendActivity_8pAL9p_text()}
+]
+
+# SendActivity_PHrUfw_text()
+- Su pedido a sido cancelado
+# SendActivity_PHrUfw()
+[Activity
+    Text = ${SendActivity_PHrUfw_text()}
+]

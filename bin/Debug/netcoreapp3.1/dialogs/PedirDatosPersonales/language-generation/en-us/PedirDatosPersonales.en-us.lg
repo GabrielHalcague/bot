@@ -1,0 +1,44 @@
+[import](common.lg)
+
+# TextInput_Prompt_M0C3d7()
+[Activity
+    Text = ${TextInput_Prompt_M0C3d7_text()}
+]
+
+# TextInput_Prompt_M0C3d7_text()
+- Nombre y Apellido
+# TextInput_Prompt_slEuWx()
+[Activity
+    Text = ${TextInput_Prompt_slEuWx_text()}
+]
+
+# TextInput_Prompt_slEuWx_text()
+- Dirección:
+# ChoiceInput_Prompt_9bdOOs()
+[Activity
+    Text = ${ChoiceInput_Prompt_9bdOOs_text()}
+]
+
+# ChoiceInput_Prompt_9bdOOs_text()
+- ¿Desea solicitar la tarjeta?
+# SendActivity_dtYatp()
+[Activity
+    Text = ${SendActivity_dtYatp_text()}
+]
+
+# SendActivity_dtYatp_text()
+- Se le enviara su tarjeta en un lapso de 15 días al domicilio especificado
+# SendActivity_5URrw6()
+[Activity
+    Text = ${SendActivity_5URrw6_text()}
+]
+
+# SendActivity_5URrw6_text()
+- Cancelando operación
+# NumberInput_Prompt_irLHBX()
+[Activity
+    Text = ${NumberInput_Prompt_irLHBX_text()}
+]
+
+# NumberInput_Prompt_irLHBX_text()
+- Ingrese DNI:

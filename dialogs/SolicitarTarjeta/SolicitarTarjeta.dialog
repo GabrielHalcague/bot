@@ -1,0 +1,57 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "uYUKYp",
+    "name": "SolicitarTarjeta",
+    "comment": "Dialogo para la solicitud de tarjeta de debito y crédito"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "QrEg0S"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "irs5F0"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_irs5F0()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "property": "user.tarjeta",
+          "choices": [
+            "American Express",
+            "Visa",
+            "Mastercard"
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "OkXmvw"
+          },
+          "activityProcessed": true,
+          "dialog": "PedirDatosPersonales"
+        }
+      ]
+    }
+  ],
+  "generator": "SolicitarTarjeta.lg",
+  "recognizer": "SolicitarTarjeta.lu.qna",
+  "id": "SolicitarTarjeta"
+}

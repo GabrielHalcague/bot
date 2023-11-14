@@ -1,0 +1,43 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_gK94Q7()
+[Activity
+    Text = ${ChoiceInput_Prompt_gK94Q7_text()}
+]
+
+# ChoiceInput_Prompt_gK94Q7_text()
+- Menu para bloquear sus tarjetas. Conose los datos de la tarjeta que quiere bloquear?
+# NumberInput_Prompt_w9GsSY_text()
+- Ingrese su numero de Tarjeta 
+# NumberInput_Prompt_w9GsSY()
+[Activity
+    Text = ${NumberInput_Prompt_w9GsSY_text()}
+]
+
+# NumberInput_Prompt_JIhWjZ_text()
+- ingrese codigo de Seguridad
+# NumberInput_Prompt_JIhWjZ()
+[Activity
+    Text = ${NumberInput_Prompt_JIhWjZ_text()}
+]
+
+# SendActivity_QiboOc_text()
+- Tarjeta bloqueada
+# SendActivity_QiboOc()
+[Activity
+    Text = ${SendActivity_QiboOc_text()}
+]
+
+# TextInput_Prompt_UifYSi_text()
+- Si no puede ingresar al home banking. Ingrese su email asociado para bloquear sus tarjetas
+# TextInput_Prompt_UifYSi()
+[Activity
+    Text = ${TextInput_Prompt_UifYSi_text()}
+]
+
+# SendActivity_h6soho_text()
+- Revise su casilla de correo
+# SendActivity_h6soho()
+[Activity
+    Text = ${SendActivity_h6soho_text()}
+]

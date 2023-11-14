@@ -1,0 +1,19 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_A1axbu_text()
+- Sobre que necesitas información
+# ChoiceInput_Prompt_A1axbu()
+[Activity
+    Text = ${ChoiceInput_Prompt_A1axbu_text()}
+]
+
+# SendActivity_zAsEpC_text()
+- ```Tener una cuenta bancaria ofrece seguridad, facilita el ahorro, permite transacciones electrónicas, genera intereses y acceso a servicios financieros. Es una herramienta esencial para administrar tus finanzas y construir un historial crediticio sólido.
+Además tenes descuentos en:
+\- Supermercados
+\- Farmacias
+\- Hoteles```
+# SendActivity_zAsEpC()
+[Activity
+    Text = ${SendActivity_zAsEpC_text()}
+]

@@ -1,0 +1,100 @@
+[import](common.lg)
+
+# SendActivity_eGn1gz()
+[Activity
+    Text = ${SendActivity_eGn1gz_text()}
+]
+
+# SendActivity_eGn1gz_text()
+- Te solicitare unos datos para abrir tu Caja de Ahorro.
+# SendActivity_Greeting_text()
+- Hola, soy Botazo, el asistente virtual de Banco del banco Provincia
+# SendActivity_lMSD9T()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# NumberInput_Prompt_vmhY7u_text()
+- Ingrese DNI:
+# NumberInput_Prompt_vmhY7u()
+[Activity
+    Text = ${NumberInput_Prompt_vmhY7u_text()}
+]
+
+# TextInput_Prompt_RguPou_text()
+- Nombre y Apellido
+# TextInput_Prompt_RguPou()
+[Activity
+    Text = ${TextInput_Prompt_RguPou_text()}
+]
+
+# TextInput_Prompt_qC4y6R()
+[Activity
+    Text = ${TextInput_Prompt_qC4y6R_text()}
+]
+
+# TextInput_Prompt_qC4y6R_text()
+- Ingrese un correo Email.
+# ChoiceInput_Prompt_5MHLTu_text()
+- Menu para bloquear sus tarjetas. Conose los datos de la tarjeta que quiere bloquear?
+# ChoiceInput_Prompt_5MHLTu()
+[Activity
+    Text = ${ChoiceInput_Prompt_5MHLTu_text()}
+]
+
+# NumberInput_Prompt_IgwRHn_text()
+- Ingrese su numero de Tarjeta 
+# NumberInput_Prompt_IgwRHn()
+[Activity
+    Text = ${NumberInput_Prompt_IgwRHn_text()}
+]
+
+# NumberInput_Prompt_7GGBg7_text()
+- ingrese codigo de Seguridad
+# NumberInput_Prompt_7GGBg7()
+[Activity
+    Text = ${NumberInput_Prompt_7GGBg7_text()}
+]
+
+# SendActivity_iWGA1A_text()
+- Tarjeta bloqueada
+# SendActivity_iWGA1A()
+[Activity
+    Text = ${SendActivity_iWGA1A_text()}
+]
+
+# TextInput_Prompt_iLlFRD_text()
+- Si no puede ingresar al home banking. Ingrese su email asociado para bloquear sus tarjetas
+# TextInput_Prompt_iLlFRD()
+[Activity
+    Text = ${TextInput_Prompt_iLlFRD_text()}
+]
+
+# SendActivity_Wl2Drl_text()
+- Revise su casilla de correo
+# SendActivity_Wl2Drl()
+[Activity
+    Text = ${SendActivity_Wl2Drl_text()}
+]
+
+# SendActivity_gzpD1W()
+[Activity
+    Text = ${SendActivity_gzpD1W_text()}
+]
+
+# SendActivity_gzpD1W_text()
+- Eligio que no, se cancela la solicitud
+# ChoiceInput_Prompt_MlYiFi()
+[Activity
+    Text = ${ChoiceInput_Prompt_MlYiFi_text()}
+]
+
+# ChoiceInput_Prompt_MlYiFi_text()
+- ¿Desea abrir su cuenta?
+# SendActivity_klgTIq()
+[Activity
+    Text = ${SendActivity_klgTIq_text()}
+]
+
+# SendActivity_klgTIq_text()
+- Bienvenido: Sr ${user.NombreCompleto}, se le envío un email a la cuenta proporcionada con los datos de cuenta creada

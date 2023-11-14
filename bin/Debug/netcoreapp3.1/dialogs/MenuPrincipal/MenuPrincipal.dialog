@@ -1,0 +1,113 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Z6T24t",
+    "name": "MenuPrincipal",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ZRSJKQ"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "k7wnjo"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Gestionar Cuenta",
+            "Solicitar Tarjetas",
+            "Cotizacion del Dolar"
+          ],
+          "property": "user.choice",
+          "prompt": "${ChoiceInput_Prompt_k7wnjo()}",
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          }
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "2LRP0e"
+          },
+          "condition": "user.choice",
+          "cases": [
+            {
+              "value": "Gestionar Cuenta",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "I8r1rI"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "GestionCuenta"
+                }
+              ]
+            },
+            {
+              "value": "Solicitar Tarjetas",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "0aMgfO"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "SolicitarTarjeta"
+                }
+              ]
+            },
+            {
+              "value": "Cotizacion del Dolar",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "KZx5B3"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "InformacionDolar"
+                }
+              ]
+            }
+          ],
+          "default": []
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "zuTu9B"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuPrincipal"
+        }
+      ]
+    }
+  ],
+  "generator": "MenuPrincipal.lg",
+  "recognizer": "MenuPrincipal.lu.qna",
+  "id": "MenuPrincipal"
+}

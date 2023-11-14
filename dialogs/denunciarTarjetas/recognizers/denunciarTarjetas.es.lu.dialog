@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_denunciarTarjetas",
+  "applicationId": "=settings.luis.denunciarTarjetas_es_lu.appId",
+  "version": "=settings.luis.denunciarTarjetas_es_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

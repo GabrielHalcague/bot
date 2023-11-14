@@ -1,0 +1,8 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_irs5F0_text()
+- Tipos de Tarjetas:
+# ChoiceInput_Prompt_irs5F0()
+[Activity
+    Text = ${ChoiceInput_Prompt_irs5F0_text()}
+]

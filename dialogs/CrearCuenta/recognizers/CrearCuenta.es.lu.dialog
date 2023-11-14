@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_CrearCuenta",
+  "applicationId": "=settings.luis.CrearCuenta_es_lu.appId",
+  "version": "=settings.luis.CrearCuenta_es_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

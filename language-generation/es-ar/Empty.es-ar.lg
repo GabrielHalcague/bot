@@ -1,0 +1,141 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_SvVMj5()
+[Activity
+    Text = ${SendActivity_SvVMj5_text()}
+]
+
+# SendActivity_SvVMj5_text()
+- Puede solicitar las siguientes tarjetas: Visa, American Expres y Mastercad.
+# SendActivity_eGn1gz()
+[Activity
+    Text = ${SendActivity_eGn1gz_text()}
+]
+
+# SendActivity_eGn1gz_text()
+- Te solicitare unos datos para abrir tu Caja de Ahorro.
+# SendActivity_Greeting_text()
+- Hola, ${WelcomeUser()} soy Botazo, el asistente virtual de Banco del banco Provincia
+# SendActivity_lMSD9T()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# ConfirmInput_Prompt_ycieb5()
+[Activity
+    Text = ${ConfirmInput_Prompt_ycieb5_text()}
+]
+
+# ConfirmInput_Prompt_ycieb5_text()
+- Quiere solicitar una tarjeta?
+# NumberInput_Prompt_vmhY7u_text()
+- Ingrese DNI:
+# NumberInput_Prompt_vmhY7u()
+[Activity
+    Text = ${NumberInput_Prompt_vmhY7u_text()}
+]
+
+# TextInput_Prompt_RguPou_text()
+- Nombre y Apellido
+# TextInput_Prompt_RguPou()
+[Activity
+    Text = ${TextInput_Prompt_RguPou_text()}
+]
+
+# TextInput_Prompt_qC4y6R()
+[Activity
+    Text = ${TextInput_Prompt_qC4y6R_text()}
+]
+
+# TextInput_Prompt_qC4y6R_text()
+- Ingrese un correo Email.
+# ConfirmInput_Prompt_2JZIHI()
+[Activity
+    Text = ${ConfirmInput_Prompt_2JZIHI_text()}
+]
+
+# ConfirmInput_Prompt_2JZIHI_text()
+- Quiere confirmar la solicitud de apertura?
+# SendActivity_soC1KY()
+[Activity
+    Text = ${SendActivity_soC1KY_text()}
+]
+
+# SendActivity_soC1KY_text()
+- Gracias por confiar en nosotros, revise su Email para continuar con la aprtura.
+# SendActivity_ihkiGv()
+[Activity
+    Text = ${SendActivity_ihkiGv_text()}
+]
+
+# SendActivity_ihkiGv_text()
+- eligio que no
+# SendActivity_vvyBwZ()
+[Activity
+    Text = ${SendActivity_vvyBwZ_text()}
+]
+
+# SendActivity_vvyBwZ_text()
+- Contamos con Caja de Ahorro y Cuenta Corriente
+# ChoiceInput_Prompt_H3zftj()
+[Activity
+    Text = ${ChoiceInput_Prompt_H3zftj_text()}
+]
+
+# ChoiceInput_Prompt_H3zftj_text()
+- Queres abrir una cuenta?
+# ChoiceInput_Prompt_C7SzNE()
+[Activity
+    Text = ${ChoiceInput_Prompt_C7SzNE_text()}
+]
+
+# ChoiceInput_Prompt_C7SzNE_text()
+- Seleccione un tipo
+# SendActivity_fhOztQ()
+[Activity
+    Text = ${SendActivity_fhOztQ_text()}
+]
+
+# SendActivity_fhOztQ_text()
+- abrir cuenta corriente
+# ChoiceInput_Prompt_x0hcPo_text()
+- Seleccione Tarjeta:
+# ChoiceInput_Prompt_x0hcPo()
+[Activity
+    Text = ${ChoiceInput_Prompt_x0hcPo_text()}
+]
+
+# SendActivity_WrfvGC_text()
+- No selecciono tarjeta
+# SendActivity_WrfvGC()
+[Activity
+    Text = ${SendActivity_WrfvGC_text()}
+]
+
+# SendActivity_N5lQMw_text()
+- mastercard
+# SendActivity_N5lQMw()
+[Activity
+    Text = ${SendActivity_N5lQMw_text()}
+]
+
+# SendActivity_BlyIl3_text()
+- AMEX
+# SendActivity_BlyIl3()
+[Activity
+    Text = ${SendActivity_BlyIl3_text()}
+]
+
+# SendActivity_vEo2pr_text()
+- Visa
+# SendActivity_vEo2pr()
+[Activity
+    Text = ${SendActivity_vEo2pr_text()}
+]

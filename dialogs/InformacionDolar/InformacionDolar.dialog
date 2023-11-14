@@ -1,0 +1,93 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "8Ri0xY",
+    "name": "InformacionDolar",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "EMpAZ6"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "333SOk"
+          },
+          "activity": "${SendActivity_333SOk()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "kHZzfy"
+          },
+          "resultProperty": "dialog.api_response",
+          "url": "https://dolarapi.com/v1/dolares/oficial",
+          "method": "GET",
+          "responseType": "json",
+          "headers": {}
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "QVdiLR"
+          },
+          "condition": "=dialog.api_response.statusCode == 200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "vZLwOB"
+              },
+              "assignments": [
+                {
+                  "property": "dialog.dolar",
+                  "value": "=dialog.api_response.content"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "gIJqlG"
+              },
+              "activity": "${SendActivity_gIJqlG()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "2BiEnH"
+              },
+              "activity": "${SendActivity_2BiEnH()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "kQU1HN"
+          },
+          "activity": "${SendActivity_kQU1HN()}"
+        },
+        {
+          "$kind": "Microsoft.BreakLoop",
+          "$designer": {
+            "id": "fyEb1X"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "InformacionDolar.lg",
+  "recognizer": "InformacionDolar.lu.qna",
+  "id": "InformacionDolar"
+}

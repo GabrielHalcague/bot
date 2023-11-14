@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# SendActivity_Greeting_text()
+- ${WelcomeUser()}
+# ChoiceInput_Prompt_k7wnjo_text()
+- ¿En qué te puedo ayudar?
+# ChoiceInput_Prompt_k7wnjo()
+[Activity
+    Text = ${ChoiceInput_Prompt_k7wnjo_text()}
+]
+

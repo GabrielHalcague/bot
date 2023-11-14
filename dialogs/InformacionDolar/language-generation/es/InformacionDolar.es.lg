@@ -1,0 +1,31 @@
+[import](common.lg)
+
+
+# SendActivity_333SOk()
+[Activity
+    Text = ${SendActivity_333SOk_text()}
+]
+
+# SendActivity_333SOk_text()
+- Obteniendo cotizacion.
+# SendActivity_kQU1HN()
+[Activity
+    Text = ${SendActivity_kQU1HN_text()}
+]
+
+# SendActivity_kQU1HN_text()
+- Los horarios de operacion son de Lunes a Viernes, de 9 a 15 horas.
+# SendActivity_gIJqlG_text()
+- La cotizacion acutal es. Para compra ${dialog.dolar.compra} y de venta ${dialog.dolar.venta}.
+# SendActivity_gIJqlG()
+[Activity
+    Text = ${SendActivity_gIJqlG_text()}
+]
+
+# SendActivity_2BiEnH()
+[Activity
+    Text = ${SendActivity_2BiEnH_text()}
+]
+
+# SendActivity_2BiEnH_text()
+- Intente en otro momento

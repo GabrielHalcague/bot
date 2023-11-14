@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# SendActivity_Zdbc7T()
+[Activity
+    Text = ${SendActivity_Zdbc7T_text()}
+]
+
+# SendActivity_Zdbc7T_text()
+- Deja la sopa

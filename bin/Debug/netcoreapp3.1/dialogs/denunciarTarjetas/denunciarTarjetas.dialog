@@ -1,0 +1,132 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "GEyz8X",
+    "name": "denunciarTarjetas",
+    "comment": "este es el menu para denunciar tarjetas"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "WgLemP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "gK94Q7"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ChoiceInput_Prompt_gK94Q7()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Si",
+            "No"
+          ],
+          "property": "user.choice",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "Jhqpb4"
+          },
+          "condition": "=user.choice==\"Si\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.NumberInput",
+              "$designer": {
+                "id": "w9GsSY"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${NumberInput_Prompt_w9GsSY()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "property": "user.numeroTarjeta"
+            },
+            {
+              "$kind": "Microsoft.NumberInput",
+              "$designer": {
+                "id": "JIhWjZ"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${NumberInput_Prompt_JIhWjZ()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.codigoSeguridad"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "QiboOc"
+              },
+              "activity": "${SendActivity_QiboOc()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "UifYSi"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_UifYSi()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "validations": [],
+              "property": "user.mail"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "h6soho"
+              },
+              "activity": "${SendActivity_h6soho()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "V6ARmP"
+          },
+          "activityProcessed": true,
+          "dialog": "MenuPrincipal",
+          "options": {}
+        }
+      ]
+    }
+  ],
+  "generator": "denunciarTarjetas.lg",
+  "recognizer": "denunciarTarjetas.lu.qna",
+  "id": "denunciarTarjetas"
+}

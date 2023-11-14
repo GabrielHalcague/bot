@@ -1,0 +1,38 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "fYz3yh",
+    "name": "nahuelito",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "NYuyds"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Zdbc7T"
+          },
+          "activity": "${SendActivity_Zdbc7T()}"
+        },
+        {
+          "$kind": "Microsoft.BreakLoop",
+          "$designer": {
+            "id": "LUW6CG"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "nahuelito.lg",
+  "recognizer": "nahuelito.lu.qna",
+  "id": "nahuelito"
+}
